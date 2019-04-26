@@ -1,0 +1,65 @@
+https://vim.rtorr.com/
+vimhelp.appspot.com
+
+hjkl = left, down, up, right
+ZZ = wq
+a = insert after carrot
+b = move whole word back
+w = move whole word forward
+$ = end of line
+^ = home of line
+ctrl + z = background vim to cli
+fg = move vim to foreground
+ctrl + r = redo
+
+yiw = yank in current word
+yaw = yank all word (includes a trailing space)
+yy = yank/ copy current line
+4yy = yank 4 lines from current carrot position
+y0 = yank 
+y1l = yank char cursor is on
+y2l = yank from cursor to 1 on the right
+y1h = yank 1 to the left of cursor
+y2h = yank 2 to the left of cursor 
+y^ = copy from cursor to beginnging
+y$ = copy from cursor to end
+p = paste after carrot
+P = paste before carrot
+p + $ = paste after word
+v^p = paste over head of line
+v0p = paste over head of line
+d0 = cut from cursor to beginnging of line
+d^ = cut from cursor to first non-whitespace delimiter
+d$ = cut from cursor to end of line
+dd = cut
+
+
+:x #save and quit
+:set number
+:set nonumber
+:set list
+:set nolist
+
+:%s/\//\\\/g #replace / with \\
+%s/\\\\n/"\\\\n"/g #replace \\n with "\\n"
+:%s/Vim/vim/c #confirm each replace
+:%s/assets/dist/g
+:%s/'index' => 'logstash',/'index' => 'filebeat',\/\/'logstash',/g
+:%s/HOSTNAME/411monitoring/g
+:%s/HOSTNAME/172.20.100.5/g
+:%s/localhost/411monitoring/g
+:%s/411\//411-1.0.1\//g
+:%s/localhost/172.20.100.5/g
+:%s/localhost:9200/172.20.100.5:9200/g
+:%s/#path: "filebeat.template.json"/path: "filebeat.template.json"/g
+:%s/#logstash:/logstash:/g
+:%s/#hosts: \["localhost/hosts: \["172.20.100.5/g
+:%s/filebeat-*/custom-/g
+:%s/# server.host: "0.0.0.0"/server.host: "172.20.100.5"/g
+
+
+arrow keys print numbers:
+vim ~/.vimrc
+set nocompatible
+set syntax on
+
