@@ -33,16 +33,25 @@ d^ = cut from cursor to first non-whitespace delimiter
 d$ = cut from cursor to end of line
 dd = cut
 
+yyp = copy paste current line
+yyjp = copy and paste below bottom line
+yy2jp = copy and paste 2 lines below cursor
+yykp = copy and paste above current line
+yy2kp = copy and paste 2 lines above cursor
 
+
+ddkP: cut and paste up a line
+ddjP: cut and paste down a line
+
+:move +1 =moves line of code down one
+:m '<-2 =moves line of code up one
 :x #save and quit
 :set number
 :set nonumber
 :set list
 :set nolist
-:move +1 =moves line of code down one
-:m '<-2 =moves line of code up one
-ddkP: cut and paste up a line
-ddjP: cut and paste down a line
+
+
 
 :%s/\//\\\/g #replace / with \\
 %s/\\\\n/"\\\\n"/g #replace \\n with "\\n"
